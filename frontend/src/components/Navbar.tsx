@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo_ama_fruits.png";
 import { useWindowWidth } from "../hooks/useWindowWidth";
+import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState("home");
   const [langOpen, setLangOpen] = useState(false);
-  const location = useLocation();
   const isMobile = useWindowWidth() < 768;
   const { t, i18n } = useTranslation();
 
@@ -18,25 +17,40 @@ export default function Navbar() {
     { code: "en", label: "EN", flag: "🇬🇧" },
     { code: "es", label: "ES", flag: "🇪🇸" },
   ];
-
   const currentLang = langs.find(l => l.code === i18n.language) || langs[0];
 
   const links = [
-    { label: t("nav.home"),     to: "/" },
-    { label: t("nav.about"),    to: "/chi-siamo" },
-    { label: t("nav.products"), to: "/prodotti" },
-    { label: t("nav.services"), to: "/servizi" },
-    { label: t("nav.where"),    to: "/dove-siamo" },
-    { label: t("nav.contact"),  to: "/contatti" },
+    { label: t("nav.home"),     id: "home" },
+    { label: t("nav.about"),    id: "chi-siamo" },
+    { label: t("nav.products"), id: "prodotti" },
+    { label: t("nav.services"), id: "servizi" },
+    { label: t("nav.contact"),  id: "contatti" },
   ];
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 60);
+    const handler = () => {
+      setScrolled(window.scrollY > 60);
+      const sections = ["home","chi-siamo","prodotti","servizi","contatti"];
+      for (const id of [...sections].reverse()) {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 100) {
+          setActive(id);
+          break;
+        }
+      }
+    };
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
   }, []);
 
-  useEffect(() => setOpen(false), [location.pathname]);
+  const scrollTo = (id: string) => {
+    setOpen(false);
+    const el = document.getElementById(id);
+    if (el) {
+      const top = el.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
 
   return (
     <nav style={{
@@ -50,34 +64,32 @@ export default function Navbar() {
         display: "flex", alignItems: "center",
         justifyContent: "space-between", height: 68,
       }}>
-        {/* LOGO */}
-        <Link to="/" style={{ textDecoration: "none", flexShrink: 0 }}>
-          <img src={logo} alt="Amafruits" style={{ height: 48, width: "auto", objectFit: "contain" }} />
-        </Link>
+        <button onClick={() => scrollTo("home")}
+          style={{ background: "none", border: "none", cursor: "pointer", padding: 0 }}>
+          <img src={logo} alt="Ama Fruits" style={{ height: 48, width: "auto", objectFit: "contain" }} />
+        </button>
 
-        {/* DESKTOP LINKS */}
         {!isMobile && (
-          <ul style={{ display: "flex", alignItems: "center", gap: 24, listStyle: "none", margin: 0, padding: 0 }}>
-            {links.map(({ label, to }) => (
-              <li key={to}>
-                <Link to={to} style={{
-                  textDecoration: "none", fontSize: 13, fontWeight: 500,
-                  color: location.pathname === to ? "#1e40af" : "#374151",
-                  borderBottom: location.pathname === to ? "2px solid #1e40af" : "2px solid transparent",
-                  paddingBottom: 3, transition: "all 0.2s",
+          <ul style={{ display: "flex", alignItems: "center", gap: 28, listStyle: "none", margin: 0, padding: 0 }}>
+            {links.map(({ label, id }) => (
+              <li key={id}>
+                <button onClick={() => scrollTo(id)} style={{
+                  background: "none", border: "none", cursor: "pointer",
+                  fontSize: 13, fontWeight: 500, padding: "4px 0",
+                  color: active === id ? "#1e40af" : "#374151",
+                  borderBottom: active === id ? "2px solid #1e40af" : "2px solid transparent",
+                  transition: "all 0.2s", fontFamily: "inherit",
                 }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#1e40af")}
-                onMouseLeave={e => (e.currentTarget.style.color = location.pathname === to ? "#1e40af" : "#374151")}>
+                onMouseLeave={e => (e.currentTarget.style.color = active === id ? "#1e40af" : "#374151")}>
                   {label}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
         )}
 
-        {/* RIGHT: lingua + hamburger */}
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          {/* SELETTORE LINGUA */}
           <div style={{ position: "relative" }}>
             <button onClick={() => setLangOpen(!langOpen)} style={{
               display: "flex", alignItems: "center", gap: 6,
@@ -89,7 +101,6 @@ export default function Navbar() {
               <span>{currentLang.label}</span>
               <span style={{ fontSize: 10 }}>▾</span>
             </button>
-
             {langOpen && (
               <div style={{
                 position: "absolute", top: "calc(100% + 8px)", right: 0,
@@ -122,23 +133,23 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* MOBILE MENU */}
       {isMobile && open && (
         <div style={{
           background: "white", borderTop: "1px solid #e0e7ff",
           padding: "16px 20px 24px", display: "flex", flexDirection: "column", gap: 4,
           boxShadow: "0 8px 24px rgba(30,64,175,0.10)",
         }}>
-          {links.map(({ label, to }) => (
-            <Link key={to} to={to} onClick={() => setOpen(false)} style={{
-              color: location.pathname === to ? "#1e40af" : "#374151",
-              textDecoration: "none", fontWeight: 500, fontSize: 15,
-              padding: "12px 12px", borderBottom: "1px solid #f3f4f6",
-              background: location.pathname === to ? "#eff6ff" : "transparent",
-              borderRadius: 8,
+          {links.map(({ label, id }) => (
+            <button key={id} onClick={() => scrollTo(id)} style={{
+              background: active === id ? "#eff6ff" : "transparent",
+              border: "none", borderBottom: "1px solid #f3f4f6",
+              color: active === id ? "#1e40af" : "#374151",
+              textAlign: "left", fontWeight: 500, fontSize: 15,
+              padding: "12px 12px", borderRadius: 8, cursor: "pointer",
+              fontFamily: "inherit",
             }}>
               {label}
-            </Link>
+            </button>
           ))}
         </div>
       )}
