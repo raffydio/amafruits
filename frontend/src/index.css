@@ -1,0 +1,39 @@
+/* File: src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* REGOLE GLOBALI FONDAMENTALI PER IL MOBILE */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Blocca lo scroll orizzontale! */
+  scroll-behavior: smooth;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  color: #111827;
+  background-color: #ffffff;
+}
+
+/* Impedisce ai padding di allargare i div e rompere il layout */
+* {
+  box-sizing: border-box;
+}
+
+/* (Opzionale) Classi Tailwind personalizzate aggiornate con l'Azzurro */
+@layer components {
+  .btn-primary {
+    @apply bg-[#0077b5] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#005f92] transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+  .btn-outline {
+    @apply border-2 border-[#0077b5] text-[#0077b5] px-8 py-3 rounded-full font-semibold hover:bg-[#0077b5] hover:text-white transition-all duration-300;
+  }
+  .section-title {
+    @apply text-4xl md:text-5xl font-bold text-[#0077b5];
+  }
+  .section-subtitle {
+    @apply text-[#0077b5] font-semibold text-sm uppercase tracking-widest mb-3 opacity-80;
+  }
+}

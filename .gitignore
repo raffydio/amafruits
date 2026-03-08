@@ -1,0 +1,68 @@
+# =========================
+# FRONTEND (Node.js / React / Vite)
+# =========================
+node_modules/
+dist/
+dist-ssr/
+build/
+*.local
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# BACKEND (Python / FastAPI)
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ambienti Virtuali Python
+venv/
+.venv/
+env/
+.env_backend/
+ENV/
+
+# Database locali (se usi SQLite)
+*.sqlite3
+*.db
+
+# =========================
+# VARIABILI D'AMBIENTE (Segreti)
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# IDE E SISTEMA OPERATIVO
+# =========================
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
