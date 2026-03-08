@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "services": "Services",
+    "where": "Where We Are",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AMA FRUITS S.R.L.",
+    "title": "AMA FRUITS S.R.L.",
+    "subtitle": "Production and Distribution of Fresh Produce and Organic Products",
+    "description": "The Natale Family has been operating in the fruit and vegetable sector for over 40 years. Distribution across Italy and international markets: Tunisia, Morocco, Egypt and Spain.",
+    "cta": "CONTACT US"
+  },
+  "about": {
+    "badge": "About Us",
+    "title": "The Natale Family — over 40 years in fresh produce",
+    "description": "Michele Natale and Gioele Natale lead AMA Fruits srl, a company specialising in the production and distribution of fresh fruit, vegetables and organic products. Our family has been in the sector for over a century — professionals committed to serving our communities and markets.",
+    "years": "Years of experience",
+    "points": [
+      "Production and distribution of fresh produce",
+      "Wide range of certified organic products",
+      "Refrigeration and rapid chilling facilities",
+      "Presence in EU and non-EU markets"
+    ]
+  },
+  "products": {
+    "badge": "Our Products",
+    "title": "Quality fresh fruit & vegetables",
+    "description": "For each product we offer a wide range of varieties to meet the needs of every market",
+    "cta": "Request Catalogue",
+    "items": [
+      { "name": "Table Grapes",       "desc": "Selection of fine sweet and crunchy varieties",           "cat": "Fruit"    },
+      { "name": "Cherries",           "desc": "Fresh first-quality cherries, multiple varieties",        "cat": "Fruit"    },
+      { "name": "Citrus Fruits",      "desc": "Oranges, lemons, mandarins — fresh and fragrant",         "cat": "Fruit"    },
+      { "name": "Peaches & Apricots", "desc": "Juicy summer fruit, harvested at peak ripeness",          "cat": "Seasonal" },
+      { "name": "Strawberries",       "desc": "Sweet red strawberries, hand-selected",                   "cat": "Premium"  },
+      { "name": "Artichokes",         "desc": "Fresh artichokes typical of Italian tradition",           "cat": "Vegetable"},
+      { "name": "Watermelons",        "desc": "Large sweet watermelons, perfect for summer",             "cat": "Seasonal" },
+      { "name": "Dried Fruits & Nuts","desc": "High quality chestnuts, walnuts and hazelnuts",           "cat": "Organic"  }
+    ]
+  },
+  "services": {
+    "badge": "Why Choose Us",
+    "title": "Our operational process",
+    "items": [
+      { "icon": "🌱", "title": "Production & Sourcing",         "desc": "We select the best local and international producers to guarantee consistent quality." },
+      { "icon": "📦", "title": "Selection & Packaging",         "desc": "Every product is carefully selected and packaged in the shortest possible time." },
+      { "icon": "❄️", "title": "Immediate Refrigeration",       "desc": "Refrigeration and rapid chilling facilities to preserve freshness and food safety." },
+      { "icon": "🚢", "title": "International Distribution",    "desc": "Partners with platforms in Tunisia, Morocco, Egypt and Spain for global distribution." }
+    ]
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Let's talk about your project",
+    "description": "We operate in the Guidonia Montecelio (RM) fruit and vegetable market and in several EU and non-EU countries.",
+    "name": "Full Name *",
+    "email": "Email *",
+    "phone": "Phone",
+    "message": "Your message *",
+    "submit": "Send Message ✈️",
+    "success_title": "Message sent!",
+    "success_desc": "We will get back to you within 24 hours.",
+    "address": "Viale del Tramonto 18, 81030 Frignano Maggiore (CE)",
+    "email_val": "info@amafruits.it",
+    "phone_michele": "+39 345 4126662",
+    "phone_gioele": "+39 333 5451983"
+  },
+  "footer": {
+    "desc": "Production and distribution of fresh fruit, vegetables and organic products. The Natale Family serving Italian and international markets since 1980.",
+    "nav_title": "Navigation",
+    "products_title": "Products",
+    "contact_title": "Contact",
+    "follow": "Follow Us",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "legal": "Legal Notice",
+    "vat": "© 2024 AMA Fruits S.R.L. — VAT IT04261260618 — Share capital €20,000 p.u."
+  }
+}

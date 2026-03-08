@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Siamo",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "where": "Dove Siamo",
+    "contact": "Contatti"
+  },
+  "hero": {
+    "badge": "AMA FRUITS S.R.L.",
+    "title": "AMA FRUITS S.R.L.",
+    "subtitle": "Produzione e Distribuzione di Ortofrutta e Prodotti Biologici",
+    "description": "La Famiglia Natale opera nel settore dell'ortofrutta da oltre 40 anni. Distribuzione in Italia e nei mercati internazionali: Tunisia, Marocco, Egitto e Spagna.",
+    "cta": "CONTATTACI"
+  },
+  "about": {
+    "badge": "Chi Siamo",
+    "title": "La Famiglia Natale, oltre 40 anni di ortofrutta",
+    "description": "Michele Natale e Gioele Natale guidano AMA Fruits srl, una società specializzata nella produzione e distribuzione di ortofrutta e prodotti biologici. La nostra famiglia opera nel settore da più di un secolo: siamo professionisti che danno tanto alla comunità e ai mercati dove operiamo.",
+    "years": "Anni di esperienza",
+    "points": [
+      "Produzione e distribuzione di ortofrutta fresca",
+      "Ampia gamma di prodotti biologici certificati",
+      "Impianti di refrigerazione e abbattimento rapido",
+      "Presenza in mercati comunitari ed extra-comunitari"
+    ]
+  },
+  "products": {
+    "badge": "I Nostri Prodotti",
+    "title": "Ortofrutta fresca di qualità",
+    "description": "Per ciascun prodotto proponiamo un'ampia gamma di varietà per soddisfare le esigenze di ogni mercato",
+    "cta": "Richiedi il Catalogo",
+    "items": [
+      { "name": "Uva da Tavola",  "desc": "Selezione di varietà pregiate, dolci e croccanti",         "cat": "Frutta"    },
+      { "name": "Ciliegie",       "desc": "Ciliegie fresche di prima qualità, varietà multiple",       "cat": "Frutta"    },
+      { "name": "Agrumi",         "desc": "Arance, limoni, mandarini — freschi e profumati",           "cat": "Frutta"    },
+      { "name": "Pesche & Albicocche", "desc": "Frutta estiva succosa, raccolta al punto giusto",     "cat": "Stagionale"},
+      { "name": "Fragole",        "desc": "Fragole rosse e dolci, selezionate a mano",                 "cat": "Premium"   },
+      { "name": "Carciofi",       "desc": "Carciofi freschi tipici della tradizione italiana",         "cat": "Verdura"   },
+      { "name": "Cocomeri",       "desc": "Cocomeri grandi e dolci, perfetti per l'estate",            "cat": "Stagionale"},
+      { "name": "Frutta Secca",   "desc": "Castagne, noci e nocciole di alta qualità",                 "cat": "Bio"       }
+    ]
+  },
+  "services": {
+    "badge": "Perché Sceglierci",
+    "title": "Il nostro processo operativo",
+    "items": [
+      { "icon": "🌱", "title": "Produzione & Approvvigionamento", "desc": "Selezioniamo i migliori produttori locali e internazionali per garantire qualità costante." },
+      { "icon": "📦", "title": "Selezione & Confezionamento",     "desc": "Ogni prodotto viene selezionato e confezionato con cura nel minor tempo possibile." },
+      { "icon": "❄️", "title": "Refrigerazione Immediata",        "desc": "Impianti di refrigerazione e abbattimento rapido per conservare freschezza e genuinità." },
+      { "icon": "🚢", "title": "Distribuzione Internazionale",    "desc": "Partner con piattaforme in Tunisia, Marocco, Egitto e Spagna per la distribuzione globale." }
+    ]
+  },
+  "contact": {
+    "badge": "Contattaci",
+    "title": "Parliamo del tuo progetto",
+    "description": "Siamo presenti nel mercato ortofrutticolo di Guidonia Montecelio (RM) e in diversi paesi comunitari ed extra-comunitari.",
+    "name": "Nome e Cognome *",
+    "email": "Email *",
+    "phone": "Telefono",
+    "message": "Il tuo messaggio *",
+    "submit": "Invia Messaggio ✈️",
+    "success_title": "Messaggio inviato!",
+    "success_desc": "Ti risponderemo entro 24 ore.",
+    "address": "Viale del Tramonto 18, 81030 Frignano Maggiore (CE)",
+    "email_val": "info@amafruits.it",
+    "phone_michele": "+39 345 4126662",
+    "phone_gioele": "+39 333 5451983"
+  },
+  "footer": {
+    "desc": "Produzione e distribuzione di ortofrutta fresca e prodotti biologici. La Famiglia Natale al servizio dei mercati italiani e internazionali dal 1980.",
+    "nav_title": "Navigazione",
+    "products_title": "Prodotti",
+    "contact_title": "Contatti",
+    "follow": "Seguici sui Social",
+    "privacy": "Privacy Policy",
+    "cookie": "Cookie Policy",
+    "legal": "Note Legali",
+    "vat": "© 2024 AMA Fruits S.R.L. — P.IVA 04261260618 — Cap. Soc. €20.000 i.v."
+  }
+}

@@ -1,14 +1,11 @@
-// File: src/main.tsx
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./i18n";
+import "./index.css";
+import App from "./App.tsx";
 
-export default function App() {
-  return (
-    <div style={{ position: "relative" }}>
-      <Navbar />
-      <Home />
-      <Footer />
-    </div>
-  );
-}
+createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);

@@ -1,0 +1,82 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Quiénes Somos",
+    "products": "Productos",
+    "services": "Servicios",
+    "where": "Dónde Estamos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "badge": "AMA FRUITS S.R.L.",
+    "title": "AMA FRUITS S.R.L.",
+    "subtitle": "Producción y Distribución de Frutas, Verduras y Productos Ecológicos",
+    "description": "La Familia Natale lleva más de 40 años en el sector de la fruticultura. Distribución en Italia y mercados internacionales: Túnez, Marruecos, Egipto y España.",
+    "cta": "CONTÁCTANOS"
+  },
+  "about": {
+    "badge": "Quiénes Somos",
+    "title": "La Familia Natale — más de 40 años en frutas y verduras",
+    "description": "Michele Natale y Gioele Natale dirigen AMA Fruits srl, empresa especializada en la producción y distribución de frutas, verduras y productos ecológicos. Nuestra familia lleva más de un siglo en el sector — profesionales comprometidos con nuestras comunidades y mercados.",
+    "years": "Años de experiencia",
+    "points": [
+      "Producción y distribución de frutas y verduras frescas",
+      "Amplia gama de productos ecológicos certificados",
+      "Instalaciones de refrigeración y enfriamiento rápido",
+      "Presencia en mercados comunitarios y extracomunitarios"
+    ]
+  },
+  "products": {
+    "badge": "Nuestros Productos",
+    "title": "Frutas y verduras frescas de calidad",
+    "description": "Para cada producto ofrecemos una amplia gama de variedades para satisfacer las necesidades de cada mercado",
+    "cta": "Solicitar Catálogo",
+    "items": [
+      { "name": "Uva de Mesa",          "desc": "Selección de variedades finas, dulces y crujientes",         "cat": "Fruta"     },
+      { "name": "Cerezas",              "desc": "Cerezas frescas de primera calidad, múltiples variedades",   "cat": "Fruta"     },
+      { "name": "Cítricos",             "desc": "Naranjas, limones, mandarinas — frescos y aromáticos",       "cat": "Fruta"     },
+      { "name": "Melocotones & Albaricoques", "desc": "Fruta de verano jugosa, recolectada en su punto",     "cat": "Temporada" },
+      { "name": "Fresas",               "desc": "Fresas rojas y dulces, seleccionadas a mano",               "cat": "Premium"   },
+      { "name": "Alcachofas",           "desc": "Alcachofas frescas típicas de la tradición italiana",        "cat": "Verdura"   },
+      { "name": "Sandías",              "desc": "Sandías grandes y dulces, perfectas para el verano",         "cat": "Temporada" },
+      { "name": "Frutos Secos",         "desc": "Castañas, nueces y avellanas de alta calidad",               "cat": "Bio"       }
+    ]
+  },
+  "services": {
+    "badge": "Por Qué Elegirnos",
+    "title": "Nuestro proceso operativo",
+    "items": [
+      { "icon": "🌱", "title": "Producción & Abastecimiento",    "desc": "Seleccionamos los mejores productores locales e internacionales para garantizar calidad constante." },
+      { "icon": "📦", "title": "Selección & Envasado",           "desc": "Cada producto se selecciona y envasa cuidadosamente en el menor tiempo posible." },
+      { "icon": "❄️", "title": "Refrigeración Inmediata",        "desc": "Instalaciones de refrigeración y enfriamiento rápido para conservar frescura y seguridad alimentaria." },
+      { "icon": "🚢", "title": "Distribución Internacional",     "desc": "Socios con plataformas en Túnez, Marruecos, Egipto y España para distribución global." }
+    ]
+  },
+  "contact": {
+    "badge": "Contáctanos",
+    "title": "Hablemos de tu proyecto",
+    "description": "Operamos en el mercado de frutas y verduras de Guidonia Montecelio (RM) y en varios países comunitarios y extracomunitarios.",
+    "name": "Nombre y Apellido *",
+    "email": "Correo electrónico *",
+    "phone": "Teléfono",
+    "message": "Tu mensaje *",
+    "submit": "Enviar Mensaje ✈️",
+    "success_title": "¡Mensaje enviado!",
+    "success_desc": "Te responderemos en 24 horas.",
+    "address": "Viale del Tramonto 18, 81030 Frignano Maggiore (CE)",
+    "email_val": "info@amafruits.it",
+    "phone_michele": "+39 345 4126662",
+    "phone_gioele": "+39 333 5451983"
+  },
+  "footer": {
+    "desc": "Producción y distribución de frutas, verduras y productos ecológicos. La Familia Natale al servicio de los mercados italianos e internacionales desde 1980.",
+    "nav_title": "Navegación",
+    "products_title": "Productos",
+    "contact_title": "Contacto",
+    "follow": "Síguenos en Redes",
+    "privacy": "Política de Privacidad",
+    "cookie": "Política de Cookies",
+    "legal": "Aviso Legal",
+    "vat": "© 2024 AMA Fruits S.R.L. — CIF IT04261260618 — Cap. Social €20.000 d.i."
+  }
+}

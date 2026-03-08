@@ -1,68 +1,98 @@
-// File: src/components/Contact.tsx
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { useWindowWidth } from "../hooks/useWindowWidth";
+
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export default function Contact() {
   const { t } = useTranslation();
-  const AZZURRO = "#0077b5";
+  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [sent, setSent] = useState(false);
+  const isMobile = useWindowWidth() < 768;
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      await fetch(`${API_URL}/api/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+    } catch {}
+    setSent(true);
+  };
+
+  const inputStyle = {
+    width: "100%", border: "1.5px solid #e5e7eb", borderRadius: 12,
+    padding: "13px 16px", fontSize: 14, outline: "none",
+    boxSizing: "border-box" as const, transition: "border-color 0.2s", fontFamily: "inherit"
+  };
+
+  const contacts = [
+    { icon: "✉️", val: t("contact.email_val") },
+    { icon: "📍", val: t("contact.address") },
+    { icon: "👤", val: `Michele Natale — ${t("contact.phone_michele")}` },
+    { icon: "👤", val: `Gioele Natale — ${t("contact.phone_gioele")}` },
+  ];
 
   return (
-    <section id="contatti" style={{ padding: "clamp(80px, 10vw, 140px) 24px", background: "#f9fafb", boxSizing: "border-box", width: "100%" }}>
-      <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
-        
-        <p style={{ color: AZZURRO, fontWeight: 700, fontSize: 13, textTransform: "uppercase", letterSpacing: "0.1em", margin: "0 0 12px" }}>
-          {t('contact.badge')}
-        </p>
-        <h2 style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 800, color: "#111827", margin: "0 0 48px" }}>
-          {t('contact.title')}
-        </h2>
-
-        {/* Griglia Contatti Diretti */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
-          
-          {/* Email */}
-          <a href="mailto:info@amafruits.it" style={{ textDecoration: "none", background: "white", padding: 32, borderRadius: 24, boxShadow: "0 4px 20px rgba(0,0,0,0.04)", display: "flex", flexDirection: "column", alignItems: "center", gap: 16, transition: "transform 0.3s" }} onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"} onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
-            <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(0, 119, 181, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: AZZURRO }}>
-              <Mail size={28} />
-            </div>
-            <div>
-              <h3 style={{ margin: "0 0 8px", color: "#111827", fontSize: 18 }}>Email</h3>
-              <p style={{ margin: 0, color: "#4b5563", fontWeight: 500 }}>info@amafruits.it</p>
-            </div>
-          </a>
-
-          {/* Telefono */}
-          <a href="tel:+39xxxxxxx" style={{ textDecoration: "none", background: "white", padding: 32, borderRadius: 24, boxShadow: "0 4px 20px rgba(0,0,0,0.04)", display: "flex", flexDirection: "column", alignItems: "center", gap: 16, transition: "transform 0.3s" }} onMouseEnter={e => e.currentTarget.style.transform = "translateY(-5px)"} onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}>
-            <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(0, 119, 181, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: AZZURRO }}>
-              <Phone size={28} />
-            </div>
-            <div>
-              <h3 style={{ margin: "0 0 8px", color: "#111827", fontSize: 18 }}>{t('contact.phone')}</h3>
-              <p style={{ margin: 0, color: "#4b5563", fontWeight: 500 }}>+39 000 000 0000</p>
-            </div>
-          </a>
-
-          {/* Indirizzo */}
-          <div style={{ background: "white", padding: 32, borderRadius: 24, boxShadow: "0 4px 20px rgba(0,0,0,0.04)", display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
-            <div style={{ width: 64, height: 64, borderRadius: "50%", background: "rgba(0, 119, 181, 0.1)", display: "flex", alignItems: "center", justifyContent: "center", color: AZZURRO }}>
-              <MapPin size={28} />
-            </div>
-            <div>
-              <h3 style={{ margin: "0 0 8px", color: "#111827", fontSize: 18 }}>Sede Operativa</h3>
-              <p style={{ margin: 0, color: "#4b5563", fontWeight: 500 }}>Viale del Tramonto, 16-18<br/>81030 Frignano (CE)</p>
-            </div>
+    <section style={{ padding: isMobile ? "64px 0" : "96px 0", background: "white" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", padding: isMobile ? "0 20px" : "0 48px", display: "flex", flexDirection: isMobile ? "column" : "row", gap: isMobile ? 40 : 80 }}>
+        <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: 24 }}>
+          <div>
+            <p style={{ color: "#1e40af", fontWeight: 700, fontSize: 12, textTransform: "uppercase", letterSpacing: "0.2em", margin: "0 0 10px" }}>{t("contact.badge")}</p>
+            <h2 style={{ fontSize: isMobile ? "1.6rem" : "clamp(1.8rem, 3vw, 2.6rem)", fontWeight: 800, color: "#111827", margin: "0 0 14px" }}>{t("contact.title")}</h2>
+            <div style={{ width: 48, height: 4, background: "#1e40af", borderRadius: 2 }} />
           </div>
-
-        </div>
-
-        {/* Pulsante LinkedIn */}
-        <div style={{ marginTop: 48 }}>
-          <a href="https://www.linkedin.com/in/michele-natale-9b9113125/" target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: 12, background: AZZURRO, color: "white", padding: "16px 32px", borderRadius: 50, textDecoration: "none", fontWeight: 700, fontSize: 15, boxShadow: "0 4px 15px rgba(0, 119, 181, 0.3)" }}>
-            <Linkedin size={20} />
-            Connettiti su LinkedIn
+          <p style={{ color: "#6b7280", lineHeight: 1.85, margin: 0, fontSize: isMobile ? 14 : 15 }}>{t("contact.description")}</p>
+          {contacts.map(({ icon, val }) => (
+            <div key={val} style={{ display: "flex", alignItems: "center", gap: 14 }}>
+              <div style={{ width: 44, height: 44, background: "#eff6ff", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>{icon}</div>
+              <span style={{ color: "#374151", fontSize: isMobile ? 13 : 14 }}>{val}</span>
+            </div>
+          ))}
+          <a href="https://www.amafruits.it" target="_blank" rel="noopener noreferrer"
+            style={{ display: "flex", alignItems: "center", gap: 14, textDecoration: "none" }}>
+            <div style={{ width: 44, height: 44, background: "#eff6ff", borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18, flexShrink: 0 }}>🌐</div>
+            <span style={{ color: "#1e40af", fontSize: isMobile ? 13 : 14, fontWeight: 500 }}>www.amafruits.it</span>
           </a>
         </div>
 
+        <div style={{ flex: 1, background: "#f8faff", borderRadius: 24, padding: isMobile ? "28px 20px" : "44px", border: "1px solid #dbeafe" }}>
+          {sent ? (
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", minHeight: 300, gap: 16, textAlign: "center" }}>
+              <span style={{ fontSize: 60 }}>✅</span>
+              <h3 style={{ fontSize: 22, fontWeight: 700, color: "#111827", margin: 0 }}>{t("contact.success_title")}</h3>
+              <p style={{ color: "#9ca3af", margin: 0 }}>{t("contact.success_desc")}</p>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+              {[
+                { field: "name",  type: "text",  ph: t("contact.name"),  req: true },
+                { field: "email", type: "email", ph: t("contact.email"), req: true },
+                { field: "phone", type: "text",  ph: t("contact.phone"), req: false },
+              ].map(({ field, type, ph, req }) => (
+                <input key={field} type={type} placeholder={ph} required={req}
+                  style={inputStyle}
+                  value={form[field as keyof typeof form]}
+                  onChange={e => setForm({ ...form, [field]: e.target.value })}
+                  onFocus={e => (e.target.style.borderColor = "#1e40af")}
+                  onBlur={e => (e.target.style.borderColor = "#e5e7eb")}
+                />
+              ))}
+              <textarea rows={5} placeholder={t("contact.message")} required
+                style={{ ...inputStyle, resize: "none" }}
+                value={form.message}
+                onChange={e => setForm({ ...form, message: e.target.value })}
+                onFocus={e => (e.target.style.borderColor = "#1e40af")}
+                onBlur={e => (e.target.style.borderColor = "#e5e7eb")}
+              />
+              <button type="submit" style={{ background: "linear-gradient(135deg, #1e40af, #2563eb)", color: "white", border: "none", padding: "15px", borderRadius: 12, fontSize: 15, fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 15px rgba(30,64,175,0.3)", fontFamily: "inherit" }}>
+                {t("contact.submit")}
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );
