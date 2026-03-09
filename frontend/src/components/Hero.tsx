@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import logo from "../assets/logo_ama_fruits.png";
 import { useWindowWidth } from "../hooks/useWindowWidth";
@@ -6,6 +5,11 @@ import { useWindowWidth } from "../hooks/useWindowWidth";
 export default function Hero() {
   const { t } = useTranslation();
   const isMobile = useWindowWidth() < 768;
+
+  const scrollToContact = () => {
+    const el = document.getElementById("contatti");
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: "smooth" });
+  };
 
   return (
     <section style={{
@@ -28,7 +32,7 @@ export default function Hero() {
           display: "flex", alignItems: "center", justifyContent: "center",
           margin: "0 auto 14px", padding: 8,
         }}>
-          <img src={logo} alt="Amafruits" style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "50%" }} />
+          <img src={logo} alt="Ama Fruits" style={{ width: "100%", height: "100%", objectFit: "contain", borderRadius: "50%" }} />
         </div>
         <div style={{ color: "#93c5fd", fontSize: 10, letterSpacing: "0.3em", textTransform: "uppercase", fontWeight: 600 }}>
           {t("hero.badge")}
@@ -65,19 +69,20 @@ export default function Hero() {
         {t("hero.description")}
       </p>
 
-      <Link to="/contatti" style={{
+      <button onClick={scrollToContact} style={{
         background: "linear-gradient(135deg, #1e40af, #2563eb)", color: "white",
         padding: isMobile ? "15px 36px" : "18px 52px",
         borderRadius: 50, fontSize: isMobile ? "13px" : "15px", fontWeight: 700,
-        textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase",
-        display: "flex", alignItems: "center", gap: 10,
+        border: "none", letterSpacing: "0.1em", textTransform: "uppercase",
+        display: "flex", alignItems: "center", gap: 10, cursor: "pointer",
         boxShadow: "0 6px 24px rgba(30,64,175,0.35)",
         position: "relative", zIndex: 1, transition: "all 0.3s",
+        fontFamily: "inherit",
       }}
       onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 12px 32px rgba(30,64,175,0.45)"; }}
       onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 6px 24px rgba(30,64,175,0.35)"; }}>
         {t("hero.cta")} <span style={{ fontSize: 18 }}>›</span>
-      </Link>
+      </button>
 
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 60, overflow: "hidden" }}>
         <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style={{ width: "100%", height: "100%" }}>

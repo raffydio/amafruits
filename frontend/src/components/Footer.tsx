@@ -24,7 +24,8 @@ export default function Footer() {
     ["info@amafruits.it",      "mailto:info@amafruits.it"],
     ["+39 345 4126662",        "tel:+393454126662"],
     ["+39 333 5451983",        "tel:+393335451983"],
-    ["Frignano Maggiore (CE)", "#contatti"],
+    ["+39 348 6434534",        "tel:393486434534"],
+    ["Frignano (CE)", "#contatti"],
   ];
 
   const socials = [
@@ -113,13 +114,10 @@ export default function Footer() {
         </div>
       </div>
 
-      <div style={{ maxWidth: 1280, margin: "40px auto 0", padding: isMobile ? "20px" : "20px 48px", borderTop: "1px solid #111f3a", display: "flex", flexDirection: isMobile ? "column" : "row", justifyContent: "space-between", alignItems: isMobile ? "flex-start" : "center", gap: 12, fontSize: 12 }}>
-        <p style={{ margin: 0 }}>{t("footer.vat")}</p>
-        <div style={{ display: "flex", gap: 20, flexWrap: "wrap" }}>
-          {[[t("footer.privacy"),"#"],[t("footer.cookie"),"#"],[t("footer.legal"),"#"]].map(([label, to]) => (
-            <Link key={label} to={to} style={{ color: "#4b5563", textDecoration: "none", fontSize: 12 }}>{label}</Link>
-          ))}
-        </div>
+      <div style={{ maxWidth: 1280, margin: "40px auto 0", padding: isMobile ? "20px" : "20px 48px", borderTop: "1px solid #111f3a", display: "flex", justifyContent: "center", alignItems: "center", fontSize: 12 }}>
+        <span style={{ color: "#4b5563", fontSize: 12, textAlign: "center" }}>
+          © 2026 AMA Fruits S.r.l. — Tutti i diritti riservati
+        </span>
       </div>
     </footer>
   );

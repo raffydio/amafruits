@@ -7,9 +7,15 @@ export default function Contact() {
 
   const contacts = [
     { icon: "✉️", val: "info@amafruits.it",                    href: "mailto:info@amafruits.it" },
-    { icon: "📍", val: "Viale del Tramonto 18, 81030 Frignano Maggiore (CE)", href: "#" },
-    { icon: "👤", val: `Michele Natale — +39 345 4126662`,      href: "tel:+393454126662" },
-    { icon: "👤", val: `Gioele Natale — +39 333 5451983`,       href: "tel:+393335451983" },
+    { icon: "📍", val: "Viale del Tramonto 18, 81030 Frignano (CE)", href: "#" },
+    { icon: "👤", val: `Amministratore-
+      Michele Natale +393454126662`,      href: "tel:+393454126662" },
+    { icon: "👤", val: `adetto vendite e acquisti - 
+      Gioele Natale — +39 333 5451983`,       href: "tel:+393335451983" },
+    { icon: "👤", val: `Amministrazione - 
+      Mariateresa Natale — +39 348 6434534`,       href: "tel:+393486434534" },
+    { icon: "👤", val: `adetto vendite e acquisti- 
+      Nicola Natale — +39 334 3126274 `,       href: "tel:+393343126274 " },
   ];
 
   return (
