@@ -32,24 +32,67 @@
     "description": "For each product we offer a wide range of varieties to meet the needs of every market",
     "cta": "Request Catalogue",
     "items": [
-      { "name": "Table Grapes",       "desc": "Selection of fine sweet and crunchy varieties",           "cat": "Fruit"    },
-      { "name": "Cherries",           "desc": "Fresh first-quality cherries, multiple varieties",        "cat": "Fruit"    },
-      { "name": "Citrus Fruits",      "desc": "Oranges, lemons, mandarins — fresh and fragrant",         "cat": "Fruit"    },
-      { "name": "Peaches & Apricots", "desc": "Juicy summer fruit, harvested at peak ripeness",          "cat": "Seasonal" },
-      { "name": "Strawberries",       "desc": "Sweet red strawberries, hand-selected",                   "cat": "Premium"  },
-      { "name": "Artichokes",         "desc": "Fresh artichokes typical of Italian tradition",           "cat": "Vegetable"},
-      { "name": "Watermelons",        "desc": "Large sweet watermelons, perfect for summer",             "cat": "Seasonal" },
-      { "name": "Dried Fruits & Nuts","desc": "High quality chestnuts, walnuts and hazelnuts",           "cat": "Organic"  }
+      {
+        "name": "Table Grapes",
+        "desc": "Selection of fine sweet and crunchy varieties",
+        "cat": "Fruit"
+      },
+      {
+        "name": "Cherries",
+        "desc": "Fresh first-quality cherries, multiple varieties",
+        "cat": "Fruit"
+      },
+      {
+        "name": "Citrus Fruits",
+        "desc": "Oranges, lemons, mandarins — fresh and fragrant",
+        "cat": "Fruit"
+      },
+      {
+        "name": "Peaches & Apricots",
+        "desc": "Juicy summer fruit, harvested at peak ripeness",
+        "cat": "Seasonal"
+      },
+      {
+        "name": "Strawberries",
+        "desc": "Sweet red strawberries, hand-selected",
+        "cat": "Premium"
+      },
+      {
+        "name": "Artichokes",
+        "desc": "Fresh artichokes typical of Italian tradition",
+        "cat": "Vegetable"
+      },
+      {
+        "name": "Watermelons",
+        "desc": "Large sweet watermelons, perfect for summer",
+        "cat": "Seasonal"
+      },
+      {
+        "name": "Dried Fruits & Nuts",
+        "desc": "High quality chestnuts, walnuts and hazelnuts",
+        "cat": "Organic"
+      }
     ]
   },
   "services": {
     "badge": "Why Choose Us",
     "title": "Our operational process",
     "items": [
-      { "icon": "🌱", "title": "Production & Sourcing",         "desc": "We select the best local and international producers to guarantee consistent quality." },
-      { "icon": "📦", "title": "Selection & Packaging",         "desc": "Every product is carefully selected and packaged in the shortest possible time." },
-      { "icon": "❄️", "title": "Immediate Refrigeration",       "desc": "Refrigeration and rapid chilling facilities to preserve freshness and food safety." },
-      { "icon": "🚢", "title": "International Distribution",    "desc": "Partners with platforms in Tunisia, Morocco, Egypt and Spain for global distribution." }
+      {
+        "icon": "🌱",
+        "title": "Production & Sourcing",
+        "desc": "We select the best local and international producers to guarantee consistent quality."
+      },
+      {
+        "icon": "📦",
+        "title": "Selection & Packaging",
+        "desc": "Every product is carefully selected and packaged in the shortest possible time."
+      },
+      {
+        "icon": "🚢",
+        "title": "International Distribution",
+        "desc": "Partners with platforms in Tunisia, Morocco, Egypt and Spain for global distribution."
+      }
     ]
   },
   "contact": {

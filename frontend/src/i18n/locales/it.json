@@ -32,24 +32,67 @@
     "description": "Per ciascun prodotto proponiamo un'ampia gamma di varietà per soddisfare le esigenze di ogni mercato",
     "cta": "Richiedi il Catalogo",
     "items": [
-      { "name": "Uva da Tavola",  "desc": "Selezione di varietà pregiate, dolci e croccanti",         "cat": "Frutta"    },
-      { "name": "Ciliegie",       "desc": "Ciliegie fresche di prima qualità, varietà multiple",       "cat": "Frutta"    },
-      { "name": "Agrumi",         "desc": "Arance, limoni, mandarini — freschi e profumati",           "cat": "Frutta"    },
-      { "name": "Pesche & Albicocche", "desc": "Frutta estiva succosa, raccolta al punto giusto",     "cat": "Stagionale"},
-      { "name": "Fragole",        "desc": "Fragole rosse e dolci, selezionate a mano",                 "cat": "Premium"   },
-      { "name": "Carciofi",       "desc": "Carciofi freschi tipici della tradizione italiana",         "cat": "Verdura"   },
-      { "name": "Cocomeri",       "desc": "Cocomeri grandi e dolci, perfetti per l'estate",            "cat": "Stagionale"},
-      { "name": "Frutta Secca",   "desc": "Castagne, noci e nocciole di alta qualità",                 "cat": "Bio"       }
+      {
+        "name": "Uva da Tavola",
+        "desc": "Selezione di varietà pregiate, dolci e croccanti",
+        "cat": "Frutta"
+      },
+      {
+        "name": "Ciliegie",
+        "desc": "Ciliegie fresche di prima qualità, varietà multiple",
+        "cat": "Frutta"
+      },
+      {
+        "name": "Agrumi",
+        "desc": "Arance, limoni, mandarini — freschi e profumati",
+        "cat": "Frutta"
+      },
+      {
+        "name": "Pesche & Albicocche",
+        "desc": "Frutta estiva succosa, raccolta al punto giusto",
+        "cat": "Stagionale"
+      },
+      {
+        "name": "Fragole",
+        "desc": "Fragole rosse e dolci, selezionate a mano",
+        "cat": "Premium"
+      },
+      {
+        "name": "Carciofi",
+        "desc": "Carciofi freschi tipici della tradizione italiana",
+        "cat": "Verdura"
+      },
+      {
+        "name": "Cocomeri",
+        "desc": "Cocomeri grandi e dolci, perfetti per l'estate",
+        "cat": "Stagionale"
+      },
+      {
+        "name": "Frutta Secca",
+        "desc": "Castagne, noci e nocciole di alta qualità",
+        "cat": "Bio"
+      }
     ]
   },
   "services": {
     "badge": "Perché Sceglierci",
     "title": "Il nostro processo operativo",
     "items": [
-      { "icon": "🌱", "title": "Produzione & Approvvigionamento", "desc": "Selezioniamo i migliori produttori locali e internazionali per garantire qualità costante." },
-      { "icon": "📦", "title": "Selezione & Confezionamento",     "desc": "Ogni prodotto viene selezionato e confezionato con cura nel minor tempo possibile." },
-      { "icon": "❄️", "title": "Refrigerazione Immediata",        "desc": "Impianti di refrigerazione e abbattimento rapido per conservare freschezza e genuinità." },
-      { "icon": "🚢", "title": "Distribuzione Internazionale",    "desc": "Partner con piattaforme in Tunisia, Marocco, Egitto e Spagna per la distribuzione globale." }
+      {
+        "icon": "🌱",
+        "title": "Produzione & Approvvigionamento",
+        "desc": "Selezioniamo i migliori produttori locali e internazionali per garantire qualità costante."
+      },
+      {
+        "icon": "📦",
+        "title": "Selezione & Confezionamento",
+        "desc": "Ogni prodotto viene selezionato e confezionato con cura nel minor tempo possibile."
+      },
+      {
+        "icon": "🚢",
+        "title": "Distribuzione Internazionale",
+        "desc": "Partner con piattaforme in Tunisia, Marocco, Egitto e Spagna per la distribuzione globale."
+      }
     ]
   },
   "contact": {

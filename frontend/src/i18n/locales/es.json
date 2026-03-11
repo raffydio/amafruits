@@ -32,24 +32,67 @@
     "description": "Para cada producto ofrecemos una amplia gama de variedades para satisfacer las necesidades de cada mercado",
     "cta": "Solicitar Catálogo",
     "items": [
-      { "name": "Uva de Mesa",          "desc": "Selección de variedades finas, dulces y crujientes",         "cat": "Fruta"     },
-      { "name": "Cerezas",              "desc": "Cerezas frescas de primera calidad, múltiples variedades",   "cat": "Fruta"     },
-      { "name": "Cítricos",             "desc": "Naranjas, limones, mandarinas — frescos y aromáticos",       "cat": "Fruta"     },
-      { "name": "Melocotones & Albaricoques", "desc": "Fruta de verano jugosa, recolectada en su punto",     "cat": "Temporada" },
-      { "name": "Fresas",               "desc": "Fresas rojas y dulces, seleccionadas a mano",               "cat": "Premium"   },
-      { "name": "Alcachofas",           "desc": "Alcachofas frescas típicas de la tradición italiana",        "cat": "Verdura"   },
-      { "name": "Sandías",              "desc": "Sandías grandes y dulces, perfectas para el verano",         "cat": "Temporada" },
-      { "name": "Frutos Secos",         "desc": "Castañas, nueces y avellanas de alta calidad",               "cat": "Bio"       }
+      {
+        "name": "Uva de Mesa",
+        "desc": "Selección de variedades finas, dulces y crujientes",
+        "cat": "Fruta"
+      },
+      {
+        "name": "Cerezas",
+        "desc": "Cerezas frescas de primera calidad, múltiples variedades",
+        "cat": "Fruta"
+      },
+      {
+        "name": "Cítricos",
+        "desc": "Naranjas, limones, mandarinas — frescos y aromáticos",
+        "cat": "Fruta"
+      },
+      {
+        "name": "Melocotones & Albaricoques",
+        "desc": "Fruta de verano jugosa, recolectada en su punto",
+        "cat": "Temporada"
+      },
+      {
+        "name": "Fresas",
+        "desc": "Fresas rojas y dulces, seleccionadas a mano",
+        "cat": "Premium"
+      },
+      {
+        "name": "Alcachofas",
+        "desc": "Alcachofas frescas típicas de la tradición italiana",
+        "cat": "Verdura"
+      },
+      {
+        "name": "Sandías",
+        "desc": "Sandías grandes y dulces, perfectas para el verano",
+        "cat": "Temporada"
+      },
+      {
+        "name": "Frutos Secos",
+        "desc": "Castañas, nueces y avellanas de alta calidad",
+        "cat": "Bio"
+      }
     ]
   },
   "services": {
     "badge": "Por Qué Elegirnos",
     "title": "Nuestro proceso operativo",
     "items": [
-      { "icon": "🌱", "title": "Producción & Abastecimiento",    "desc": "Seleccionamos los mejores productores locales e internacionales para garantizar calidad constante." },
-      { "icon": "📦", "title": "Selección & Envasado",           "desc": "Cada producto se selecciona y envasa cuidadosamente en el menor tiempo posible." },
-      { "icon": "❄️", "title": "Refrigeración Inmediata",        "desc": "Instalaciones de refrigeración y enfriamiento rápido para conservar frescura y seguridad alimentaria." },
-      { "icon": "🚢", "title": "Distribución Internacional",     "desc": "Socios con plataformas en Túnez, Marruecos, Egipto y España para distribución global." }
+      {
+        "icon": "🌱",
+        "title": "Producción & Abastecimiento",
+        "desc": "Seleccionamos los mejores productores locales e internacionales para garantizar calidad constante."
+      },
+      {
+        "icon": "📦",
+        "title": "Selección & Envasado",
+        "desc": "Cada producto se selecciona y envasa cuidadosamente en el menor tiempo posible."
+      },
+      {
+        "icon": "🚢",
+        "title": "Distribución Internacional",
+        "desc": "Socios con plataformas en Túnez, Marruecos, Egipto y España para distribución global."
+      }
     ]
   },
   "contact": {
